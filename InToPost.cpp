@@ -44,7 +44,7 @@ bool isValidInfixExpression(const std::string& infix) {
 
 std::string InToPost::inToPost(const std::string& infix) {
     if (!isValidInfixExpression(infix)) {
-        return ""; // Или можно выбросить исключение, если предпочтительнее
+        return ""; 
     }
     std::string postfix;
     Stack operatorStack;
@@ -73,7 +73,7 @@ std::string InToPost::inToPost(const std::string& infix) {
 
             if (operatorStack.size()>0 && operatorStack.top() == '('){
                 postfixQueue.enqueue(' ');
-                operatorStack.pop();  // Удаляем открывающую скобку
+                operatorStack.pop(); 
             }
 
         } else {
